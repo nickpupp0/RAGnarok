@@ -11,7 +11,7 @@ Prompt injection gets most of the attention, but a growing share of
 real-world LLM incidents happen one layer down, in the retrieval
 pipeline: a poisoned document, a crafted embedding, or a missing tenant
 filter on a vector store. OWASP added a dedicated category for this in
-2025 (`LLM08:2025 Vector and Embedding Weaknesses`) specifically because
+2025 (`LLM08:2026 Vector and Embedding Weaknesses`) specifically because
 RAG has become the default way enterprises ground LLMs in their own
 data, and neither vector databases nor LLMs enforce per-document
 permissions on their own.
