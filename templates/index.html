@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>RAGnarok :: Helios Support</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="brand">
+    <span class="brand-mark">RAGnarok</span>
+    <span class="brand-sub">poisoning the well: a RAG security lab</span>
+  </div>
+  <div class="defense-toggle">
+    <span id="defenseLabel" class="mode-label mode-off">VULNERABLE</span>
+    <label class="switch">
+      <input type="checkbox" id="defenseSwitch">
+      <span class="slider"></span>
+    </label>
+    <span class="mode-caption">defense_mode</span>
+  </div>
+</header>
+
+<main class="layout">
+
+  <!-- LEFT: chat as an end user -->
+  <section class="panel chat-panel">
+    <div class="panel-header">
+      <h2>Helios Support</h2>
+      <select id="tenantSelect">
+        <option value="acme">Tenant: Acme Corp</option>
+        <option value="globex">Tenant: Globex Inc</option>
+      </select>
+    </div>
+    <div id="chatLog" class="chat-log"></div>
+    <form id="chatForm" class="chat-input-row">
+      <input id="chatInput" type="text" placeholder="Ask Helios Support a question..." autocomplete="off">
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <!-- MIDDLE: live retrieval / event log -->
+  <section class="panel log-panel">
+    <div class="panel-header"><h2>Live pipeline log</h2></div>
+    <div id="eventLog" class="event-log"></div>
+  </section>
+
+  <!-- RIGHT: admin / attacker controls -->
+  <section class="panel admin-panel">
+    <div class="tabs">
+      <button class="tab-btn active" data-tab="ingest">Ingest</button>
+      <button class="tab-btn" data-tab="attacks">Attacks</button>
+      <button class="tab-btn" data-tab="kb">Knowledge base</button>
+    </div>
+
+    <div class="tab-content" id="tab-ingest">
+      <p class="hint">Simulates a low-trust content-editor role adding a doc to a tenant's KB.</p>
+      <select id="ingestTenant">
+        <option value="acme">acme</option>
+        <option value="globex">globex</option>
+        <option value="global">global</option>
+      </select>
+      <input id="ingestTitle" type="text" placeholder="Document title">
+      <textarea id="ingestContent" rows="6" placeholder="Document content..."></textarea>
+      <button id="ingestBtn">Ingest document</button>
+    </div>
+
+    <div class="tab-content hidden" id="tab-attacks">
+      <p class="hint">Runs the corresponding script in <code>attacks/</code> against this instance.</p>
+      <button class="attack-btn" data-attack="attack1">
+        Attack 1 — Direct RAG Poisoning
+      </button>
+      <button class="attack-btn" data-attack="attack2">
+        Attack 2 — Semantic Collision
+      </button>
+      <button class="attack-btn" data-attack="attack3">
+        Attack 3 — Cross-Tenant Leak
+      </button>
+      <button id="resetBtn" class="reset-btn">Reset knowledge base</button>
+    </div>
+
+    <div class="tab-content hidden" id="tab-kb">
+      <select id="kbTenantFilter">
+        <option value="">All tenants</option>
+        <option value="acme">acme</option>
+        <option value="globex">globex</option>
+      </select>
+      <button id="refreshKbBtn">Refresh</button>
+      <div id="kbList" class="kb-list"></div>
+    </div>
+  </section>
+
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.5/socket.io.min.js"></script>
+<script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>
