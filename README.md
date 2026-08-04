@@ -93,12 +93,3 @@ artifact; screenshot or screen-record both states.
 Full writeup with severity ratings and remediation in
 [`findings/FINDINGS_REPORT.md`](findings/FINDINGS_REPORT.md).
 
-## Extending this
-
-- Swap in `sentence-transformers` and re-run Attack #2 to show semantic
-  collision holds against dense embeddings too, not just TF-IDF.
-- Add a fourth tenant and a role-based ingestion permission model, then
-  attack *that* instead of the flat trust levels here.
-- Wire in an actual moderation/classifier API in `defenses.py` in place
-  of the regex-based `scan_for_injection` to discuss detection quality
-  and evasion (encoding tricks, unicode homoglyphs, translation).
