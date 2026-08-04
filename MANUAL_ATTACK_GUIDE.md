@@ -25,7 +25,9 @@ Everything below is just this loop, applied with specific content.
 
 ## 1. Attack 1 -- Direct RAG Poisoning (manual)
 
-**Goal:** get the bot to solicit a customer's card number by planting an instruction inside a document instead of the chat itself.(screenshots/ragnarok-01-attack1-result.png)
+**Goal:** get the bot to solicit a customer's card number by planting an instruction inside a document instead of the chat itself.![RAGnarok initial UI: chat panel, live pipeline log, and admin panel with the seeded Acme/Globex knowledge base, before any attack has run](screenshots/ragnarok-00-initial-ui.png)
+
+
 
 1. Go to the **Ingest** tab. Set tenant to `acme`.
 2. Title: `Refund Escalation Update`
