@@ -11,7 +11,7 @@ Prompt injection gets most of the attention, but a growing share of
 real-world LLM incidents happen one layer down, in the retrieval
 pipeline: a poisoned document, a crafted embedding, or a missing tenant
 filter on a vector store. OWASP added a dedicated category for this in
-2025 (`LLM08:2026 Vector and Embedding Weaknesses`) specifically because
+2026 (`LLM08:2026 Vector and Embedding Weaknesses`) specifically because
 RAG has become the default way enterprises ground LLMs in their own
 data, and neither vector databases nor LLMs enforce per-document
 permissions on their own.
@@ -84,11 +84,11 @@ artifact; screenshot or screen-record both states.
 
 ## Framework mapping
 
-| Attack | OWASP Top 10 for LLM Apps (2025) | MITRE ATLAS |
+| Attack | OWASP Top 10 for LLM Apps (2026) | MITRE ATLAS |
 |---|---|---|
-| 1. Direct poisoning | LLM01:2025 Prompt Injection (indirect); LLM08:2025 Vector and Embedding Weaknesses | AML.T0051 LLM Prompt Injection; AML.T0020 Poison Training Data |
-| 2. Semantic collision | LLM08:2025 Vector and Embedding Weaknesses (similarity attacks) | AML.T0051 LLM Prompt Injection |
-| 3. Cross-tenant leak | LLM02:2025 Sensitive Information Disclosure; LLM08:2025 Vector and Embedding Weaknesses | AML.T0060 Data from AI Services (RAG database retrieval) |
+| 1. Direct poisoning | LLM01:2026 Prompt Injection (indirect); LLM08:2026 Vector and Embedding Weaknesses | AML.T0051 LLM Prompt Injection; AML.T0020 Poison Training Data |
+| 2. Semantic collision | LLM08:2026 Vector and Embedding Weaknesses (similarity attacks) | AML.T0051 LLM Prompt Injection |
+| 3. Cross-tenant leak | LLM02:2026 Sensitive Information Disclosure; LLM08:2026 Vector and Embedding Weaknesses | AML.T0060 Data from AI Services (RAG database retrieval) |
 
 Full writeup with severity ratings and remediation in
 [`findings/FINDINGS_REPORT.md`](findings/FINDINGS_REPORT.md).
