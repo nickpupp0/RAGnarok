@@ -3,15 +3,6 @@
 A quick walkthrough for setting up the lab and demoing each of the three
 attacks, defended vs. undefended.
 
-> 📸 **Screenshot placeholders below are intentional and unfilled.**
-> Each one is a real markdown image link pointing at a file under
-> `screenshots/` that doesn't exist yet -- they'll render as a broken
-> image icon until you add the real file. Create a `screenshots/`
-> folder in the project root, capture each one as you work through the
-> steps, and save it under the exact filename shown so the links start
-> resolving automatically. The alt text describes exactly what the
-> screenshot should show.
-
 ## 1. Install and configure
 
 Unzip the project, then install dependencies:
