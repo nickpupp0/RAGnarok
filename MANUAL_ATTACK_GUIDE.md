@@ -60,6 +60,10 @@ Everything below is just this loop, applied with specific content.
 
 **Try variants:** reword the trigger phrase (`"disregard prior guidance"` instead of `"ignore all previous instructions"`, or frame it as `"note to the assistant reviewing this ticket"` instead of `"SYSTEM OVERRIDE"`) and see whether the behavior still works. This is the same instinct as jailbreak-phrasing research -- useful groundwork for section 5, where you'll check which of your phrasings the ingestion screen actually catches.
 
+7. Notice in the screenshot, in this case, the updated refund policy is not ranked as the top result in the pipeline, and the chat bot support assistant is allowing refunds past 30 days.
+
+*Note: Despite being intentionally vulnerable, it can still be non-deterministic!*
+
 ---
 
 ## 2. Attack 2 -- Semantic Collision (manual)
