@@ -147,12 +147,4 @@ Anything that gets through here despite `defense_mode` being on is a legitimate 
 
 ---
 
-## Where this leaves you
 
-Every one of the numbers already written up in `findings/FINDINGS_REPORT.md`
-(the 0.371 vs 0.310 ranking in Attack 1, the 4/4 collision rate in Attack 2)
-came from exactly this manual loop, just automated into a script for
-repeatability. Anything you find manually that the scripts don't cover --
-a phrasing that evades screening, a lower keyword-stuffing threshold, a
-new probing angle for the cross-tenant leak -- is a legitimate addition
-to that report, not a deviation from it.
