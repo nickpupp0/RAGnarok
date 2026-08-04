@@ -1,12 +1,7 @@
 # RAGnarok
 
 A deliberately vulnerable RAG-backed support chatbot, built as an AI red
-team / security research lab. Companion piece to
-[`llm-fuzzer`](../llm-fuzzer) (prompt mutation) and
-[`MESA-OS`](../MESA-OS) (agent / MCP / tool-calling vulnerabilities) --
-this one covers the retrieval layer: what happens when the *data feeding
-the model*, not just the prompt, is attacker-controlled.
-
+team / security research lab.
 > ⚠️ Intentionally insecure by default. Run in an isolated environment
 > only. Do not point this at real data or expose it publicly.
 
